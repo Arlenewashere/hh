@@ -1,0 +1,406 @@
+
+rcc@RBE104x20 MINGW64 ~/Documents
+$ git clone
+You must specify a repository to clone.
+
+usage: git clone [<options>] [--] <repo> [<dir>]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+    -n, --no-checkout     don't create a checkout
+    --bare                create a bare repository
+    --mirror              create a mirror repository (implies bare)
+    -l, --local           to clone from a local repository
+    --no-hardlinks        don't use local hardlinks, always copy
+    -s, --shared          setup as shared repository
+    --recursive           initialize submodules in the clone
+    --recurse-submodules  initialize submodules in the clone
+    --template <template-directory>
+                          directory from which templates will be used
+    --reference <repo>    reference repository
+    --dissociate          use --reference only while cloning
+    -o, --origin <name>   use <name> instead of 'origin' to track upstream
+    -b, --branch <branch>
+                          checkout <branch> instead of the remote's HEAD
+    -u, --upload-pack <path>
+                          path to git-upload-pack on the remote
+    --depth <depth>       create a shallow clone of that depth
+    --single-branch       clone only one branch, HEAD or --branch
+    --separate-git-dir <gitdir>
+                          separate git dir from working tree
+    -c, --config <key=value>
+                          set config inside the new repository
+
+
+rcc@RBE104x20 MINGW64 ~/Documents
+$ git clone https://github.com/Arlenewashere/
+Cloning into 'Arlenewashere'...
+fatal: repository 'https://github.com/Arlenewashere/' not found
+
+rcc@RBE104x20 MINGW64 ~/Documents
+$ git clone https://github.com/Arlenewashere/Homework-6
+Cloning into 'Homework-6'...
+Username for 'https://github.com': arlenewashere
+Password for 'https://arlenewashere@github.com':
+remote: Repository not found.
+fatal: repository 'https://github.com/Arlenewashere/Homework-6/' not found
+
+rcc@RBE104x20 MINGW64 ~/Documents
+$ git clone https://github.com/Arlenewashere/Homework-6.git
+Cloning into 'Homework-6'...
+Username for 'https://github.com': Arlenewashere
+Password for 'https://Arlenewashere@github.com':
+remote: Repository not found.
+fatal: repository 'https://github.com/Arlenewashere/Homework-6.git/' not found
+
+rcc@RBE104x20 MINGW64 ~/Documents
+$ git clone https://github.com/Arlenewashere/Homework6.git
+Cloning into 'Homework6'...
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+Checking connectivity... done.
+
+rcc@RBE104x20 MINGW64 ~/Documents
+$ ls
+Adobe/       Homework6/  My Music@     NetBeansProjects/   Visual Studio 2008/
+Autodesk/    Inventor/   My Pictures@  New Database.odb    Visual Studio 2015/
+Autoloader/  KESI/       My Shapes/    OpacTest/           desktop.ini
+Fax/         MATLAB/     My Videos@    Scanned Documents/  pim_installmgr.log
+
+rcc@RBE104x20 MINGW64 ~/Documents
+$ dir
+Adobe       Homework6  My\ Music     NetBeansProjects    Visual\ Studio\ 2008
+Autodesk    Inventor   My\ Pictures  New\ Database.odb   Visual\ Studio\ 2015
+Autoloader  KESI       My\ Shapes    OpacTest            desktop.ini
+Fax         MATLAB     My\ Videos    Scanned\ Documents  pim_installmgr.log
+
+rcc@RBE104x20 MINGW64 ~/Documents
+$ cd Homework6/
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ ls
+Fractions  README.md
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ git add README.md
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ git commit
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'rcc@RBE104x20.(none)')
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ git config --global user.email ""
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ git config --global user.name "Arlene Gonzalez"
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ git commit
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'rcc@RBE104x20.(none)')
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ git commit -m "This is a test."
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'rcc@RBE104x20.(none)')
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   README.md
+
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ git push https://github.com/Arlenewashere/Homework6.git
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': Arlenewashere
+Password for 'https://Arlenewashere@github.com':
+Everything up-to-date
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ git commit -m "This is a test."
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'rcc@RBE104x20.(none)')
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ git config --global user.email "agonzalez405@student.rcc.edu"
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ git config --global user.name "Arlene Gonzalez"
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ git commit -m "This is a test."
+[master 773f79b] This is a test.
+ 1 file changed, 2 insertions(+)
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ git push https://github.com/Arlenewashere/Homework6.git
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': Arlenewashere
+Password for 'https://Arlenewashere@github.com':
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 334 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://github.com/Arlenewashere/Homework6.git
+   172df26..773f79b  master -> master
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ ls
+Fractions  README.md
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ vim Fractions
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ mv Fractions FractionTest.java
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ ls
+FractionTest.java  README.md
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ git add FractionTest.java
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ git commit -m "Fixed name of file to FractionTest, and added .java extension"
+[master 43fbc8a] Fixed name of file to FractionTest, and added .java extension
+ 1 file changed, 256 insertions(+)
+ create mode 100644 FractionTest.java
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ git push https://github.com/Arlenewashere/Homework6.git
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': Arlenewashere
+Password for 'https://Arlenewashere@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Arlenewashere/Homework6.git/'
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ git push https://github.com/Arlenewashere/Homework6.git
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': Arlenewashere
+Password for 'https://Arlenewashere@github.com':
+Counting objects: 2, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 325 bytes | 0 bytes/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/Arlenewashere/Homework6.git
+   773f79b..43fbc8a  master -> master
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ ls
+FractionTest.java  README.md
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ cd ..
+
+rcc@RBE104x20 MINGW64 ~/Documents
+$ ls
+Adobe/       Homework6/  My Music@     NetBeansProjects/   Visual Studio 2008/
+Autodesk/    Inventor/   My Pictures@  New Database.odb    Visual Studio 2015/
+Autoloader/  KESI/       My Shapes/    OpacTest/           desktop.ini
+Fax/         MATLAB/     My Videos@    Scanned Documents/  pim_installmgr.log
+
+rcc@RBE104x20 MINGW64 ~/Documents
+$ cd Homework6/
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ ls
+FractionTest.java  README.md
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ ls
+FractionTest.java  Fractions/  README.md
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ git add ./Fractions/
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ git commit -m "Add Professor Conrad's Fractions Project from class"
+[master 54450b3] Add Professor Conrad's Fractions Project from class
+ 17 files changed, 1808 insertions(+)
+ create mode 100644 Fractions/build.xml
+ create mode 100644 Fractions/build/classes/.netbeans_automatic_build
+ create mode 100644 Fractions/build/classes/.netbeans_update_resources
+ create mode 100644 Fractions/build/classes/Fraction.class
+ create mode 100644 Fractions/build/classes/FractionDriver.class
+ create mode 100644 Fractions/build/test/classes/.netbeans_automatic_build
+ create mode 100644 Fractions/build/test/classes/.netbeans_update_resources
+ create mode 100644 Fractions/build/test/classes/FractionTest.class
+ create mode 100644 Fractions/nbproject/build-impl.xml
+ create mode 100644 Fractions/nbproject/genfiles.properties
+ create mode 100644 Fractions/nbproject/private/private.properties
+ create mode 100644 Fractions/nbproject/private/private.xml
+ create mode 100644 Fractions/nbproject/project.properties
+ create mode 100644 Fractions/nbproject/project.xml
+ create mode 100644 Fractions/src/Fraction.java
+ create mode 100644 Fractions/src/FractionDriver.java
+ rename Fractions => Fractions/test/FractionTest.java (100%)
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$ git push https://github.com/Arlenewashere/Homework6.git
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': Arlenewashere
+Password for 'https://Arlenewashere@github.com':
+To https://github.com/Arlenewashere/Homework6.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Arlenewashere/Homework6.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+rcc@RBE104x20 MINGW64 ~/Documents/Homework6 (master)
+$
